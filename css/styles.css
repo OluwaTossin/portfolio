@@ -56,30 +56,22 @@ nav ul li a.active {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     max-width: 800px;
+    display: none; /* Hide sections initially */
+}
+
+.section.active {
+    display: block; /* Show active section */
 }
 
 .hero {
     text-align: center;
+    padding: 1rem; /* Reduce padding for home section */
 }
 
 .hero img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-}
-
-.about, .portfolio {
-    margin: 2rem auto;
-    max-width: 800px;
-    display: none; /* Hide sections initially */
-}
-
-.about.active, .portfolio.active {
-    display: block; /* Show active section */
-}
-
-.hidden {
-    display: none;
 }
 
 h1, h2 {
@@ -97,6 +89,10 @@ footer {
     padding: 1rem;
     position: relative;
     width: 100%;
+}
+
+.hidden {
+    display: none;
 }
 
 html {
