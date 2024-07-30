@@ -3,11 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
     const navbar = document.getElementById('navbar');
 
+    // Function to show a section and hide others
+    const showSection = (targetId) => {
+        sections.forEach(section => {
+            if (section.id === targetId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    };
+
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
+            showSection(targetId);
             const targetSection = document.getElementById(targetId);
             window.scrollTo({
                 top: targetSection.offsetTop - navbar.offsetHeight,
@@ -15,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Initially show the home section
+    showSection('home');
 
     // Active link switching and sticky navbar
     window.addEventListener('scroll', () => {
