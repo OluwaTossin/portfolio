@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Oluwatosin Jegede's Portfolio</title>
+    <title>Oluwatosin Jegede's Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <header id="navbar">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section id="home" class="section hero">
             <img src="images/profile.jpg" alt="Profile Picture">
             <h1>Oluwatosin Jegede</h1>
             <h2>DevOps Engineer</h2>
+        </section>
+        <section id="about" class="section about">
+            <h1>About Me</h1>
+            <p>I am Oluwatosin Jegede, a DevOps Engineer with over two years of experience in AWS cloud services and infrastructure automation...</p>
+            <h2>Certifications</h2>
+            <ul>
+                <li>AWS Certified Solutions Architect – Associate</li>
+                <li>Cisco Certified Network Technician</li>
+            </ul>
+        </section>
+        <section id="portfolio" class="section portfolio">
+            <h1>Projects</h1>
+            <h2>Project 1: Machine Learning Deployment</h2>
+            <p>Description of the project...</p>
+            <h2>Project 2: Real-Time Compliance Monitoring</h2>
+            <p>Description of the project...</p>
         </section>
     </main>
     <footer>
