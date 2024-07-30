@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSection = (targetId) => {
         sections.forEach(section => {
             if (section.id === targetId) {
-                section.classList.add('active');
+                section.classList.remove('hidden');
+                section.scrollIntoView({ behavior: 'smooth' });
             } else {
-                section.classList.remove('active');
+                section.classList.add('hidden');
             }
         });
     };
@@ -20,32 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             showSection(targetId);
-            const targetSection = document.getElementById(targetId);
-            window.scrollTo({
-                top: targetSection.offsetTop - navbar.offsetHeight,
-                behavior: 'smooth'
-            });
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            link.classList.add('active');
         });
     });
 
     // Initially show the home section
     showSection('home');
-
-    // Active link switching and sticky navbar
-    window.addEventListener('scroll', () => {
-        let currentSection = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - navbar.offsetHeight;
-            if (pageYOffset >= sectionTop) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === currentSection) {
-                link.classList.add('active');
-            }
-        });
-    });
 });
