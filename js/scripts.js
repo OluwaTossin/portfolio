@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
-    const navbar = document.getElementById('navbar');
 
     // Function to show a section and hide others
     const showSection = (targetId) => {
