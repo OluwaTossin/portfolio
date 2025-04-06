@@ -30,17 +30,6 @@ nav {
   position: relative;
 }
 
-.hamburger {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  font-size: 1.5rem;
-  color: white;
-  z-index: 1100;
-}
-
 nav ul {
   list-style: none;
   padding: 0.5rem 1rem;
@@ -50,7 +39,6 @@ nav ul {
   align-items: center;
   flex-wrap: wrap;
   background-color: #004d40;
-  transition: max-height 0.4s ease-in-out;
 }
 
 nav ul li {
@@ -59,26 +47,27 @@ nav ul li {
 }
 
 nav ul li a {
-  display: block;
+  display: inline-block;
+  width: 100%;
   padding: 0.75rem 0.5rem;
   font-size: 1.05rem;
   font-weight: 600;
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
   background-color: #ffffff;
   color: #004d40;
-  transform: scale(1.05);
 }
 
 nav ul li a.active {
-  text-decoration: underline;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid white;
 }
 
 /* === MAIN CONTENT === */
@@ -281,30 +270,27 @@ footer {
   font-size: 1rem;
 }
 
-/* === MEDIA QUERIES === */
+/* === MOBILE OVERRIDES === */
 @media (max-width: 768px) {
   .hamburger {
-    display: none; /* Hide hamburger entirely */
+    display: none;
   }
 
   nav ul {
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0.5rem 0.2rem;
-    background-color: #004d40;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
   }
 
   nav ul li {
     flex: 1 1 25%;
-    text-align: center;
+    min-width: 25%;
   }
 
   nav ul li a {
     font-size: 0.9rem;
     padding: 0.75rem 0.3rem;
+    white-space: nowrap;
   }
 
   .hero,
@@ -317,4 +303,32 @@ footer {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
+}
+/* === Back to Top Button === */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: #004d40;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#backToTop:hover {
+  background-color: #00695c;
+  transform: scale(1.1);
+}
+
+/* === Nav Icon Alignment === */
+nav ul li a i {
+  margin-right: 6px;
+  font-size: 1rem;
+  vertical-align: middle;
 }
