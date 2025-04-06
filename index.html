@@ -1,61 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Oluwatosin Jegede's Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Garamond&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Oluwatosin Jegede's Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Oluwatosin Jegede's Portfolio">
-    <meta property="og:description" content="Portfolio of Oluwatosin Jegede, DevOps Engineer specializing in AWS cloud services and infrastructure automation.">
-    <meta property="og:image" content="https://github.com/OluwaTossin/portfolio/raw/main/images/profile.jpg">
-    <meta property="og:url" content="https://github.com/OluwaTossin/portfolio">
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Oluwatosin Jegede's Portfolio" />
+  <meta property="og:description" content="Portfolio of Oluwatosin Jegede, DevOps Engineer specializing in AWS cloud services and infrastructure automation." />
+  <meta property="og:image" content="https://github.com/OluwaTossin/portfolio/raw/main/images/profile.jpg" />
+  <meta property="og:url" content="https://oluwatossin.github.io/portfolio/index.html" />
 
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Oluwatosin Jegede's Portfolio">
-    <meta name="twitter:description" content="Portfolio of Oluwatosin Jegede, DevOps Engineer specializing in AWS cloud services and infrastructure automation.">
-    <meta name="twitter:image" content="https://github.com/OluwaTossin/portfolio/raw/main/images/profile.jpg">
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Oluwatosin Jegede's Portfolio" />
+  <meta name="twitter:description" content="Portfolio of Oluwatosin Jegede, DevOps Engineer specializing in AWS cloud services and infrastructure automation." />
+  <meta name="twitter:image" content="https://github.com/OluwaTossin/portfolio/raw/main/images/profile.jpg" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <img src="images/profile.jpg" alt="Profile Picture">
-            <h1>Oluwatosin Jegede</h1>
-            <h2>DevOps Engineer</h2>
-            <p class="intro-text black-text">I'm a DevOps Engineer, specializing in AWS cloud services and infrastructure automation. I am superb at enhancing productivity and streamlining operations through effective use of CI/CD pipelines and cloud technologies.</p>
-            <p class="intro-text black-text">In my free time, you can catch me exploring new tech trends, contributing to open-source projects, or enjoying a good book.</p>
-            <div class="social-buttons">
-                <a href="https://www.linkedin.com/in/oluwatosinjegede/" target="_blank">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://twitter.com/thozyne" target="_blank">
-                    <img src="images/twitter.png" alt="Twitter">
-                </a>
-                <a href="https://github.com/OluwaTossin?tab=repositories" target="_blank">
-                    <img src="images/github.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="buttons">
-                <a href="resume.pdf" class="button" target="_blank">Resume</a>
-                <a href="mailto:careers.tosinjegede@gmail.com" class="button">Contact</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Oluwatosin Jegede. All rights reserved.</p>
-    </footer>
-    <script src="js/scripts.js"></script>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero portfolio">
+      <div style="text-align:center;">
+        <img src="images/profile.jpg" alt="Profile Picture" style="border-radius: 50%; width: 150px; height: 150px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+      </div>
+      <h1 style="text-align:center; font-size:2rem; margin-top:1rem;">Oluwatosin Jegede</h1>
+      <h2 style="text-align:center; color: #00796b; font-weight:600;">DevOps Engineer</h2>
+      <p style="text-align:center; max-width:700px; margin:1rem auto;">
+        I specialize in AWS cloud services and infrastructure automation. My work focuses on enhancing productivity, streamlining deployments, and building secure, scalable DevOps pipelines using modern tools like Terraform, Docker, Kubernetes, and GitHub Actions.
+      </p>
+      <p style="text-align:center; max-width:700px; margin:1rem auto;">
+        When I’m not engineering cloud-native solutions, I’m probably learning something new, contributing to open-source, or enjoying a thought-provoking book.
+      </p>
+
+      <div class="social-buttons" style="text-align:center;">
+        <a href="https://www.linkedin.com/in/oluwatosinjegede/" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://twitter.com/thozyne" target="_blank">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://github.com/OluwaTossin?tab=repositories" target="_blank">
+          <img src="images/github.png" alt="GitHub" />
+        </a>
+      </div>
+
+      <div class="buttons" style="text-align:center;">
+        <a href="resume.pdf" class="button" target="_blank">View Resume</a>
+        <a href="mailto:careers.tosinjegede@gmail.com" class="button">Contact Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Oluwatosin Jegede. All rights reserved.</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>
