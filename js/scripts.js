@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Highlight active link
   const navLinks = document.querySelectorAll('.nav-link');
   const currentPath = window.location.pathname.split('/').pop();
 
@@ -8,16 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Project filtering (only if input exists on this page)
   const input = document.getElementById('project-filter');
-  const cards = document.querySelectorAll('.project-card');
-
-  input.addEventListener('input', () => {
-    const query = input.value.toLowerCase();
-    cards.forEach(card => {
-      const tags = card.getAttribute('data-tags') || '';
-      const text = card.innerText.toLowerCase();
-      const matches = tags.includes(query) || text.includes(query);
-      card.style.display = matches ? 'block' : 'none';
+  if (input) {
+    const cards = document.querySelectorAll('.project-card');
+    input.addEventListener('input', () => {
+      const query = input.value.toLowerCase();
+      cards.forEach(card => {
+        const tags = card.getAttribute('data-tags') || '';
+        const text = card.innerText.toLowerCase();
+        const matches = tags.includes(query) || text.includes(query);
+        card.style.display = matches ? 'block' : 'none';
+      });
     });
-  });
+  }
+
+  // Hamburger menu (only if hamburger exists on this page)
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  }
 });
