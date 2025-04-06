@@ -1,247 +1,287 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #2c3e50;
-    line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
 header {
-    background-color: #004d40;
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #004d40;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
+  list-style: none;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+nav ul li {
+  flex: 0 1 auto;
+  text-align: center;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s, color 0.3s;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+  display: inline-block;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    color: #004d40;
-    background-color: white;
-    border-radius: 8px;
+  color: #004d40;
+  background-color: white;
+  border-radius: 8px;
 }
 
 nav ul li a.active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 main {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: auto;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: hidden;
 }
 
 .section-title {
-    text-align: center;
-    color: #004d40;
-    margin-bottom: 2.5rem;
-    font-size: 2.2rem;
-    font-weight: 700;
+  text-align: center;
+  color: #004d40;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
-    background: linear-gradient(to bottom, #ffffff, #f2fdfb);
-    padding: 1.75rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(to bottom, #ffffff, #f2fdfb);
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
 }
 
 .project-card h2 {
-    font-size: 1.35rem;
-    color: #004d40;
-    margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  color: #004d40;
+  margin-bottom: 0.75rem;
 }
 
 .project-card p {
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .project-card a {
-    color: #00796b;
-    font-weight: 600;
-    text-decoration: none;
-    margin-right: 1rem;
+  color: #00796b;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 1rem;
 }
 
 .project-card a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .project-card .services {
-    font-size: 0.9rem;
-    color: #333;
-    margin-top: 0.25rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .tech-icon {
-    font-size: 1rem;
-    background-color: #e0f2f1;
-    color: #004d40;
-    padding: 0.35rem 0.65rem;
-    border-radius: 8px;
-    font-weight: 600;
+  font-size: 1rem;
+  background-color: #e0f2f1;
+  color: #004d40;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 .fancy-line {
-    border: none;
-    height: 2px;
-    background: linear-gradient(to right, #004d40, transparent);
-    margin: 2rem 0;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #004d40, transparent);
+  margin: 2rem 0;
 }
 
 .hero {
-    text-align: center;
-    margin: 2rem auto;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    max-width: 900px;
+  text-align: center;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
 }
 
 .hero img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .hero h1 {
-    font-size: 2.2rem;
-    margin-top: 1rem;
-    color: #004d40;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  color: #004d40;
 }
 
 .hero h2 {
-    font-weight: 600;
-    color: #00796b;
-    font-size: 1.3rem;
+  font-weight: 600;
+  color: #00796b;
+  font-size: 1.3rem;
 }
 
 .hero p {
-    max-width: 680px;
-    margin: 1rem auto;
-    font-size: 1rem;
-    color: #333;
+  max-width: 680px;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #333;
 }
 
 .button {
-    background-color: #004d40;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    margin: 0 10px;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s;
+  background-color: #004d40;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .button:hover {
-    background-color: #00695c;
-    transform: scale(1.05);
+  background-color: #00695c;
+  transform: scale(1.05);
 }
 
 .social-buttons {
-    margin: 1.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .social-buttons a {
-    margin: 0 12px;
-    color: #004d40;
-    font-size: 1.5rem;
-    transition: transform 0.3s;
+  margin: 0 12px;
+  color: #004d40;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
 }
 
 .social-buttons a:hover {
-    transform: scale(1.2);
-    color: #00796b;
+  transform: scale(1.2);
+  color: #00796b;
 }
 
 footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 3rem;
-    font-size: 0.9rem;
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
 }
 
 .animate-fade-in {
-    opacity: 0;
-    animation: fadeIn 1.2s ease-in forwards;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in forwards;
 }
 
 .animate-slide-in {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 0.8s ease-out forwards;
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .filter-bar {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .filter-bar input {
-    padding: 0.6rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 280px;
-    max-width: 90%;
-    font-size: 1rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 280px;
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  nav ul li {
+    flex: 0 1 45%;
+    text-align: center;
+  }
+
+  .hero,
+  .about,
+  .portfolio,
+  .project-card {
+    padding: 1rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
