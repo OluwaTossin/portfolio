@@ -19,21 +19,49 @@
     </header>
     <main>
         <section class="portfolio">
-        
-            
+
+            <h2>Deploying, Securing, and Monitoring a Cloud-Native Recipe-Sharing Application with AWS, Prometheus, and Grafana</h2>
+            <p>
+                <a href="https://github.com/OluwaTossin/AWS-Cloud-Projects/tree/main/chapter3/code" target="_blank">GitHub Repo</a> |
+                <a href="https://www.linkedin.com/pulse/deploying-securing-monitoring-cloud-native-aws-grafana-jegede-lhs5f/" target="_blank">LinkedIn Article</a>
+            </p>
+            <p><strong>Project Objectives</strong></p>
+            <p>This project involved the end-to-end deployment of a cloud-native recipe-sharing application that transformed a manual, offline process of sharing culinary content into a scalable, digital platform. Leveraging AWS services and modern DevOps practices, I provisioned the infrastructure using AWS CloudFormation, deployed the backend using FastAPI with Uvicorn on EC2, and hosted the frontend—built with React and TypeScript—on Amazon S3, integrating it with API Gateway for RESTful interactions. I created a dual interface: a user page for browsing and searching recipes, and an admin interface for content management. For monitoring and observability, I integrated Prometheus to scrape FastAPI metrics, collecting data on request rates, latency, and error frequencies, and visualized these metrics using Grafana dashboards. The system was designed for peak usage periods, particularly Fridays and Saturdays, and incorporated cost-efficiency strategies to accommodate global growth, targeting a user base of 100,000 for potential business partnerships with food delivery services.</p>
+            <p><strong>Services Used</strong></p>
+            <p>Amazon EC2, CloudFormation, Amazon S3, FastAPI, Prometheus, Grafana, API Gateway, React, TypeScript</p>
+            <hr class="fancy-line">
+
+            <h2>Secure Three-Tier Web Application with GitHub Actions CI/CD, S3 Hosting, Deployment to Dev and Prod Servers, and Comprehensive Monitoring</h2>
+            <p>
+                <a href="https://github.com/OluwaTossin/aws-three-tier-app" target="_blank">GitHub Repo</a> |
+                <a href="https://www.linkedin.com/pulse/secure-three-tier-web-application-github-actions-cicd-jegede-ikm4f/" target="_blank">LinkedIn Article</a>
+            </p>
+            <p><strong>Project Objectives</strong></p>
+            <p>This project entailed the creation and deployment of a secure and robust three-tier web application architecture leveraging AWS services and DevOps methodologies. The infrastructure was codified using Terraform, which provisioned a custom VPC complete with public/private subnets, NAT gateways, and route tables for secure traffic management. The frontend, built with static files, was hosted on Amazon S3, while the backend—developed in Node.js—was deployed to EC2 instances. CI/CD automation was achieved through GitHub Actions, linking development (dev) and production (main) branches to distinct environments. Every code commit triggered seamless deployment pipelines, reducing manual overhead and enabling continuous delivery. Monitoring was implemented using AWS CloudWatch for system metrics and AWS Managed Grafana for rich visual analytics. The integration of Systems Manager allowed automated agent installations and ongoing health checks, thus establishing a reliable and observable platform fit for scalable growth and enterprise-grade operations.</p>
+            <p><strong>Services Used</strong></p>
+            <p>Amazon S3, EC2, VPC, Terraform, GitHub Actions, CloudWatch, AWS Systems Manager, AWS Managed Grafana</p>
+            <hr class="fancy-line">
+
+            <h2>Secure Three-Tier Web Application Deployment on Kubernetes with AWS Monitoring</h2>
+            <p>
+                <a href="https://github.com/OluwaTossin/Three-tier-Application-Deployment-" target="_blank">GitHub Repo</a> |
+                <a href="https://www.linkedin.com/pulse/secure-three-tier-web-application-deployment-aws-oluwatosin-jegede-7fdif/" target="_blank">LinkedIn Article</a>
+            </p>
+            <p><strong>Project Objectives</strong></p>
+            <p>In this project, I architected and deployed a secure, containerized three-tier web application using Kubernetes on AWS. The system comprised a frontend presentation layer, a backend logic layer, and a persistent data layer. I used Terraform to provision an Amazon EKS cluster and configured VPC networking, IAM roles, and security groups. Docker was used to containerize application components, which were pushed to AWS ECR and deployed using Kubernetes manifests. To manage ingress traffic, I implemented the AWS ALB Ingress Controller. Monitoring was a core objective, so I enabled control plane logging via AWS CloudWatch to capture EKS API, audit, and authenticator logs. This project reflects my ability to design production-grade infrastructure with high availability, automated scaling, secure access control, and operational observability—all essential for real-world enterprise deployments.</p>
+            <p><strong>Services Used</strong></p>
+            <p>AWS EKS, IAM, VPC, Subnets, Security Groups, Docker, AWS ECR, Kubernetes, ALB Ingress Controller, AWS CloudWatch</p>
+            <hr class="fancy-line">
+
             <h2>End-to-End DevOps Pipeline Implementation: Automated Infrastructure, CI/CD, and Monitoring with GitHub Actions, AWS EKS, and ELK Stack</h2>
             <p>
                 <a href="https://github.com/OluwaTossin/TOYE-devops-project" target="_blank">GitHub Repo</a> | 
                 <a href="https://www.linkedin.com/pulse/end-to-end-devops-pipeline-implementation-automated-cicd-jegede-e6dzf/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <ul>
-                <li>Automate Infrastructure Deployment: Use Terraform to define and deploy a secure and scalable web application infrastructure on AWS, including VPCs, subnets, and EC2 instances.</li>
-                <li>Implement Continuous Integration: Set up a CI pipeline using GitHub Actions that automatically tests the application, builds a Docker image, and pushes it to a container registry upon every commit.</li>
-                <li>Establish Continuous Deployment: Deploy the Docker image to an AWS EKS Kubernetes cluster, ensuring high availability and fault tolerance with Kubernetes manifests.</li>
-                <li>Set Up Monitoring and Logging: Configure Prometheus and Grafana for comprehensive monitoring and use the ELK stack for centralized logging, creating dashboards and alerts for key application metrics.</li>
-                <li>Incorporate Security and Scalability: Implement SSL/TLS for secure communication, manage IAM roles for least privilege, and configure auto-scaling in the Kubernetes cluster to handle varying loads effectively.</li>
-            </ul>
+            <p>This project encapsulated a full DevOps lifecycle, starting from infrastructure provisioning to continuous integration and deployment, culminating in full-stack observability. I utilized Terraform to deploy a secure and scalable AWS infrastructure comprising VPCs, subnets, EC2 instances, and IAM configurations. I implemented a GitHub Actions pipeline that automated code testing, container image builds, and image publishing to AWS ECR. The application was deployed on Amazon EKS using Kubernetes manifests with built-in redundancy and autoscaling. For monitoring, I configured Prometheus and Grafana dashboards, and centralized logging was managed using the ELK stack (Elasticsearch, Logstash, and Kibana). Security was enforced through IAM policies and HTTPS via SSL/TLS termination at the load balancer. This comprehensive pipeline emulates real-world enterprise DevOps workflows and validates my expertise in infrastructure as code, CI/CD, container orchestration, and proactive system monitoring.</p>
+            <p><strong>Services Used</strong></p>
+            <p>Terraform, GitHub Actions, Docker, AWS EKS, AWS ECR, Prometheus, Grafana, ELK Stack, IAM, SSL/TLS</p>
             <hr class="fancy-line">
 
             <h2>Automated Cloud Disaster Recovery and Business Continuity Solution</h2>
@@ -42,12 +70,9 @@
                 <a href="https://www.linkedin.com/pulse/automated-cloud-disaster-recovery-business-continuity-oluwatosin-dg9of/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <ul>
-                <li>AWS services for resilience</li>
-                <li>Terraform for infrastructure management</li>
-                <li>GitHub Actions for CI/CD</li>
-                <li>Datadog for system monitoring and alerts</li>
-            </ul>
+            <p>This project was focused on building a cloud-based disaster recovery and business continuity system using AWS. Leveraging Terraform, I codified and provisioned a redundant infrastructure designed to withstand regional failures. CI/CD automation was established through GitHub Actions, ensuring that infrastructure and application updates could be redeployed reliably in any failover scenario. For real-time performance and fault detection, Datadog was integrated to collect metrics, set thresholds, and trigger incident alerts. The solution ensures minimal downtime, clear recovery procedures, and operational resilience in case of disaster scenarios—making it ideal for mission-critical enterprise applications.</p>
+            <p><strong>Services Used</strong></p>
+            <p>AWS EC2, S3, IAM, Route 53, Terraform, GitHub Actions, Datadog</p>
             <hr class="fancy-line">
 
             <h2>Containerizing, Automating, and Monitoring a WebApp with Docker, GitHub, CI/CD, Prometheus, and Grafana</h2>
@@ -56,7 +81,9 @@
                 <a href="https://www.linkedin.com/pulse/containerizing-automating-monitoring-webapp-docker-cicd-oluwatosin-4uthf/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <p>Containerize a web application using Docker, automate deployment with GitHub Actions CI/CD pipelines, and establish monitoring and logging with Prometheus and Grafana to ensure efficiency, reliability, and scalability.</p>
+            <p>This project demonstrated the transformation of a traditional web application into a containerized, observable, and fully automated solution. I used Docker to containerize the Node.js application, ensuring consistency across development and production environments. GitHub Actions was employed to automate the CI/CD pipeline, streamlining testing, build, and deployment phases. For observability, I integrated Prometheus to gather application metrics and Grafana to visualize these in real time, enabling proactive monitoring and rapid troubleshooting. This project showcases my proficiency in containerization, continuous delivery, and operational intelligence.</p>
+            <p><strong>Services Used</strong></p>
+            <p>Docker, GitHub Actions, Node.js, Prometheus, Grafana</p>
             <hr class="fancy-line">
 
             <h2>Comprehensive Deployment and Monitoring of a Machine Learning Model with Flask on AWS Using Prometheus and Grafana</h2>
@@ -65,13 +92,9 @@
                 <a href="https://www.linkedin.com/pulse/comprehensive-deployment-monitoring-machine-learning-model-jegede-mfmaf/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <ul>
-                <li>AWS SageMaker and Jupyter Notebook for model development</li>
-                <li>AWS S3 for scalable storage</li>
-                <li>AWS CloudFormation and GitHub Actions for automated deployment</li>
-                <li>Prometheus and Grafana for monitoring and visualization</li>
-                <li>AWS Security Hub for security audits</li>
-            </ul>
+            <p>This project focused on deploying a machine learning model built using Jupyter Notebook and SageMaker. The model was containerized and served using Flask. AWS S3 was utilized for data storage, while CloudFormation automated the deployment process. GitHub Actions ensured seamless CI/CD integration. To maintain visibility into model performance and system health, I implemented Prometheus for metrics collection and Grafana for visualizations. AWS Security Hub was used to conduct security audits, thereby ensuring compliance and best practice adherence across the deployment.</p>
+            <p><strong>Services Used</strong></p>
+            <p>AWS SageMaker, Flask, GitHub Actions, AWS S3, Prometheus, Grafana, AWS Security Hub, CloudFormation</p>
             <hr class="fancy-line">
 
             <h2>CI/CD Pipeline for Scalable Web App using AWS Amplify, AWS CodeBuild, AWS CodePipeline, Terraform, Lambda, and CloudWatch for Monitoring</h2>
@@ -80,28 +103,9 @@
                 <a href="https://www.linkedin.com/pulse/cicd-pipeline-scalable-web-app-using-aws-amplify-jegede-oluwatosin-0ha3f/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <ul>
-                <li>Terraform: Infrastructure provisioning</li>
-                <li>AWS Lambda: Hosting backend Node.js services</li>
-                <li>AWS Amplify: Deploying the React/Next.js frontend</li>
-                <li>Amazon RDS: Hosting the MySQL database</li>
-                <li>AWS CodePipeline and CodeBuild: CI/CD pipeline setup</li>
-                <li>AWS CloudWatch: Monitoring and logging</li>
-            </ul>
-            <hr class="fancy-line">
-
-            <h2>Automated CI/CD for a Full-Stack Application on Google Cloud Platform (GCP) Using Docker, Terraform, GitHub Actions, and Google Cloud Operations Suite</h2>
-            <p>
-                <a href="https://github.com/OluwaTossin/full-stack-gcp-ci-cd" target="_blank">GitHub Repo</a> | 
-                <a href="https://www.linkedin.com/pulse/automated-cicd-full-stack-applications-gcp-using-docker-jegede-oumzf/" target="_blank">LinkedIn Article</a>
-            </p>
-            <p><strong>Project Objectives</strong></p>
-            <ul>
-                <li>Google Cloud Run</li>
-                <li>Terraform</li>
-                <li>Google Cloud Operations Suite</li>
-                <li>IAM roles for deployment, monitoring, and security</li>
-            </ul>
+            <p>In this project, I implemented a scalable CI/CD pipeline using AWS services. Terraform was used to provision the backend infrastructure, including Lambda functions for Node.js APIs, and Amazon RDS for MySQL-based data storage. AWS Amplify handled the frontend deployment of a React/Next.js application. The CI/CD process was automated using CodePipeline and CodeBuild, ensuring consistent and rapid updates. Monitoring and logging were enabled through AWS CloudWatch to ensure operational transparency and application reliability.</p>
+            <p><strong>Services Used</strong></p>
+            <p>AWS Amplify, AWS CodePipeline, AWS CodeBuild, AWS Lambda, Amazon RDS, Terraform, AWS CloudWatch</p>
             <hr class="fancy-line">
 
             <h2>Efficient CI/CD Implementation for a Node.js App using Jenkins and Amazon S3 for Artifact Management</h2>
@@ -110,7 +114,9 @@
                 <a href="https://www.linkedin.com/pulse/efficient-cicd-implementation-nodejs-app-using-amazon-oluwatosin-aii2f/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <p>Set up a CI/CD pipeline for a Node.js application using Jenkins for automation, GitHub for version control, and AWS S3 for artifact management.</p>
+            <p>This project implemented a robust CI/CD pipeline for a Node.js application using Jenkins as the orchestration tool. GitHub was used for version control, and AWS S3 served as the centralized storage for build artifacts. Jenkins pipelines automated testing and deployment, significantly reducing development cycle times while maintaining high code quality. This setup illustrated my capacity to integrate traditional CI/CD tools with modern cloud services.</p>
+            <p><strong>Services Used</strong></p>
+            <p>Jenkins, GitHub, Amazon S3, Node.js</p>
             <hr class="fancy-line">
 
             <h2>AWS Infrastructure Compliance Audit System with AWS Config and Lambda</h2>
@@ -118,7 +124,9 @@
                 <a href="https://www.linkedin.com/pulse/aws-infrastructure-compliance-audit-system-config-jegede-oluwatosin-b4u6f/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <p>Use AWS Config to monitor AWS resource configurations for compliance. An AWS Lambda function sends alerts or takes action for non-compliance.</p>
+            <p>I developed a serverless audit system using AWS Config to track configuration compliance across AWS resources. AWS Lambda was employed to evaluate resource states and take action or alert in case of non-compliance. This solution provides real-time governance and compliance enforcement across a growing AWS environment, ensuring alignment with security and operational standards.</p>
+            <p><strong>Services Used</strong></p>
+            <p>AWS Config, AWS Lambda, IAM, CloudWatch</p>
             <hr class="fancy-line">
 
             <h2>AWS Cloud Security Dashboard</h2>
@@ -126,8 +134,11 @@
                 <a href="https://www.linkedin.com/pulse/aws-cloud-security-dashboard-jegede-oluwatosin-ifwyf/" target="_blank">LinkedIn Article</a>
             </p>
             <p><strong>Project Objectives</strong></p>
-            <p>Develop a web-based dashboard to monitor AWS environment security aspects, including security group settings, IAM roles, and access policies.</p>
+            <p>I built a web-based security dashboard that aggregates AWS security data including IAM role audits, security group assessments, and access policy evaluations. This dashboard provides a central interface for real-time visibility into the security posture of AWS environments, enabling rapid detection and remediation of misconfigurations or policy violations.</p>
+            <p><strong>Services Used</strong></p>
+            <p>AWS IAM, Security Groups, CloudTrail, Lambda, S3, API Gateway</p>
             <hr class="fancy-line">
+
         </section>
     </main>
     <footer>
