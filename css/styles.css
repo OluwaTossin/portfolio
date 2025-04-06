@@ -1,17 +1,16 @@
-/* Add this to your styles.css file */
-
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f9f9f9;
+    color: #2c3e50;
+    line-height: 1.6;
 }
 
 header {
     background-color: #004d40;
     color: white;
-    padding: 1rem;
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -20,161 +19,125 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0.5rem;
-    transition: color 0.3s, background-color 0.3s;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
     color: #004d40;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 nav ul li a.active {
     text-decoration: underline;
 }
 
-.hero {
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 800px;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-}
-
-.hero h1, .hero h2 {
-    font-family: 'Garamond', serif;
-    color: #004d40;
-}
-
-.hero p {
-    max-width: 600px;
-    margin: 1rem auto;
-}
-
-.hero .black-text {
-    color: black;
-}
-
-.social-buttons {
-    margin: 1rem 0;
-}
-
-.social-buttons a {
-    margin: 0 10px;
-}
-
-.social-buttons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.social-buttons img:hover {
-    transform: scale(1.2);
-}
-
-.buttons {
-    margin-top: 1rem;
-}
-
-.button {
-    background-color: #004d40;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.button:hover {
-    background-color: #00695c;
-    transform: scale(1.05);
-}
-
 main {
-    padding: 1rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
-footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    margin-top: 2rem;
-}
-
-.about, .portfolio {
-    background-color: white;
+.portfolio {
     padding: 2rem;
-    margin: 1rem 0;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.about h1, .portfolio h1 {
-    color: #004d40;
+.section-title {
     text-align: center;
+    color: #004d40;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-.about h2, .portfolio h2 {
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h2 {
+    font-size: 1.25rem;
     color: #004d40;
+    margin-bottom: 0.75rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    color: #00796b;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.project-card .services {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
 }
 
 .fancy-line {
     border: none;
     height: 2px;
     background: linear-gradient(to right, #004d40, transparent);
-    margin: 1.5rem 0;
+    margin: 2rem 0;
 }
 
-.animate-fade-in {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
 }
 
-.animate-slide-in {
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: slideIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
     }
-}
 
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    .portfolio {
+        padding: 1rem;
+    }
+
+    .project-card {
+        padding: 1rem;
     }
 }
