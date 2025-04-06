@@ -334,7 +334,8 @@ nav ul li a i {
 }
 @media (max-width: 768px) {
   nav ul li a i {
-    display: none;
+    display: none !important;
   }
 }
+
 
