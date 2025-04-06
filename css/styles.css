@@ -332,3 +332,9 @@ nav ul li a i {
   font-size: 1rem;
   vertical-align: middle;
 }
+@media (max-width: 768px) {
+  nav ul li a i {
+    display: none;
+  }
+}
+
