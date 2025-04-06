@@ -17,51 +17,71 @@ body {
   overflow-x: hidden;
 }
 
+/* === HEADER & NAVIGATION === */
 header {
   background-color: #004d40;
   color: white;
-  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+nav {
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 1100;
+}
+
 nav ul {
   list-style: none;
-  padding: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  padding: 0.5rem 1rem;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #004d40;
+  transition: max-height 0.4s ease-in-out;
 }
 
 nav ul li {
-  flex: 0 1 auto;
+  flex: 1 1 25%;
   text-align: center;
 }
 
 nav ul li a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.05rem;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s, color 0.3s;
-  display: inline-block;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
+  background-color: #ffffff;
   color: #004d40;
-  background-color: white;
-  border-radius: 8px;
+  transform: scale(1.05);
 }
 
 nav ul li a.active {
   text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* === MAIN CONTENT === */
 main {
   padding: 2rem 1rem;
   max-width: 1200px;
@@ -83,6 +103,7 @@ main {
   gap: 2rem;
 }
 
+/* === PROJECT CARD === */
 .project-card {
   background: linear-gradient(to bottom, #ffffff, #f2fdfb);
   padding: 1.75rem;
@@ -139,13 +160,7 @@ main {
   font-weight: 600;
 }
 
-.fancy-line {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #004d40, transparent);
-  margin: 2rem 0;
-}
-
+/* === HERO & ABOUT === */
 .hero {
   text-align: center;
   margin: 2rem auto;
@@ -182,6 +197,7 @@ main {
   color: #333;
 }
 
+/* === BUTTONS === */
 .button {
   background-color: #004d40;
   color: white;
@@ -198,6 +214,7 @@ main {
   transform: scale(1.05);
 }
 
+/* === SOCIAL === */
 .social-buttons {
   margin: 1.5rem 0;
 }
@@ -214,6 +231,7 @@ main {
   color: #00796b;
 }
 
+/* === FOOTER === */
 footer {
   background-color: #004d40;
   color: white;
@@ -223,6 +241,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* === ANIMATIONS === */
 .animate-fade-in {
   opacity: 0;
   animation: fadeIn 1.2s ease-in forwards;
@@ -247,6 +266,7 @@ footer {
   }
 }
 
+/* === FILTER BAR === */
 .filter-bar {
   text-align: center;
   margin-bottom: 2rem;
@@ -261,16 +281,24 @@ footer {
   font-size: 1rem;
 }
 
-/* Mobile Optimizations */
-@media (max-width: 600px) {
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  nav ul.open {
+    max-height: 500px;
   }
 
   nav ul li {
-    flex: 0 1 45%;
+    flex: 1 1 100%;
     text-align: center;
   }
 
